@@ -1,0 +1,130 @@
+:root {
+  --bg: #f7f6f3;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --line: #e8e6e1;
+  --accent: #2f6fed;
+  --chip: #eef3ff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+.hero {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 20px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 44px);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+.role {
+  margin: 10px 0 12px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #243b6b;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.chips span {
+  background: var(--chip);
+  color: #1e3a8a;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 8px 20px 48px;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px 22px 20px;
+  margin-top: 18px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+p { margin: 0 0 10px; font-size: 15px; color: #2a2a2a; }
+.tools { color: var(--muted); font-size: 13px; }
+
+.facts {
+  margin: 0 0 12px;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.facts li { margin: 4px 0; }
+.facts strong { color: var(--text); }
+
+.player {
+  width: 100%;
+  max-height: 70vh;
+  margin-top: 12px;
+  border-radius: 10px;
+  background: #000;
+  display: block;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+footer {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 8px 20px 40px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .hero { padding-top: 28px; }
+  section { padding: 16px; }
+}
