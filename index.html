@@ -3,249 +3,343 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>丁一璇｜HARDCORE PORTFOLIO · AIGC / 剪辑 / 双语字幕</title>
-  <meta name="description" content="丁一璇硬核作品集 — AI混剪 · 中英双语字幕 · 独立成片交付 · 中国美术学院全英项目" />
-  <meta property="og:title" content="丁一璇 · AIGC / 硬核作品集" />
-  <meta property="og:description" content="独立剪辑 · AI混剪 · 中英双语字幕 · 字幕QC工程" />
+  <title>丁一璇｜Bilingual Folio · 双语双轨作品集</title>
+  <meta name="description" content="丁一璇双语作品集 — 中英双轨编辑部版式 · AI混剪 · 中英双语字幕 · 国美全英项目 · 字幕QC工程" />
+  <meta property="og:title" content="丁一璇 · Bilingual Dual-Track Folio" />
+  <meta property="og:description" content="中英双轨呈现 · 独立剪辑 · AI混剪 · 双语字幕交付" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;600;700&family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- immersive ambient layers -->
-  <canvas id="particles" aria-hidden="true"></canvas>
-  <div class="orb orb-1" aria-hidden="true"></div>
-  <div class="orb orb-2" aria-hidden="true"></div>
-  <div class="orb orb-3" aria-hidden="true"></div>
-  <div class="bg-layer" aria-hidden="true"></div>
-  <div class="grid-overlay" aria-hidden="true"></div>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
-
-  <div class="cursor" id="cursor" aria-hidden="true"></div>
-  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
-
-  <div class="nav-shell">
-    <nav class="nav">
-      <a class="nav-brand mag" href="#top">丁一璇 <span>/ HARDCORE</span></a>
-      <div class="nav-links">
-        <a class="mag" href="#works">WORKS</a>
-        <a class="mag" href="#engineering">ENGINEERING</a>
-        <a class="mag" href="#contact">CONTACT</a>
-      </div>
-    </nav>
-  </div>
-
-  <header class="hero" id="top">
-    <div class="hero-layout">
-      <div class="hero-copy reveal">
-        <div class="hero-badge">
-          <span class="pulse"></span>
-          AIGC · DELIVERY · BILINGUAL · IMMERSIVE
+  <div class="page">
+    <header class="masthead">
+      <div class="masthead-inner">
+        <div>
+          <p class="folio-meta">Folio 2026 · Vol. I · Dual Track</p>
+          <p class="mast-title">
+            <a href="#top">丁一璇<span class="slash">/</span><span class="en">Ding Yixuan</span></a>
+          </p>
         </div>
-        <h1 class="hero-title">
-          <span class="glitch" data-text="丁一璇">丁一璇</span>
-        </h1>
-        <p class="hero-sub">AI 内容生成 · 硬核成片交付 · 中英双语字幕</p>
-        <p class="hero-meta">
-          浙江传媒学院 · 播音与主持艺术（双语方向）· 本科在读<br />
-          电话/微信 18857404732 · jaden20030518@gmail.com
+        <nav class="mast-nav" aria-label="Primary">
+          <a href="#works">Works</a>
+          <a href="#engineering">Engineering</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="track-legend" aria-hidden="true">
+        <span><i class="track-dot zh"></i> ZH Track · 中文轨</span>
+        <span><i class="track-dot en"></i> EN Track · English rail</span>
+        <span>Live subtitle strip ↓</span>
+      </div>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="issue-line">AIGC · Bilingual Delivery · Editorial Folio</p>
+          <h1>
+            双语成片，双轨呈现
+            <span class="en-line">Two languages. One delivery track.</span>
+          </h1>
+          <p class="deck">AI 内容生成 · 独立剪辑 · 中英字幕 · 可点播交付</p>
+
+          <div class="dual-lede">
+            <div class="col zh">
+              <span class="label">中文轨</span>
+              浙江传媒学院播音与主持艺术（双语方向）。面向 AI 内容 / AIGC / 新媒体与双语讲解岗位：用可验证的成片与工程仓证明「会生成，更能落地」。
+            </div>
+            <div class="col en">
+              <span class="label">English rail</span>
+              Zhejiang University of Media and Communications · Broadcasting (Bilingual). Built for AI content, AIGC, and bilingual media roles — finished films you can stream, plus a subtitle QC toolkit.
+            </div>
+          </div>
+
+          <ul class="meta-list">
+            <li><strong>电话 / WeChat</strong> 18857404732</li>
+            <li><strong>邮箱 / Email</strong> jaden20030518@gmail.com</li>
+            <li><strong>在读</strong> 播音与主持艺术（双语方向）· 本科大三</li>
+          </ul>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#works">进入作品双轨 ↓</a>
+            <a class="btn btn-ghost" href="https://github.com/jaden20030518-lgtm/bilingual-subtitle-workflow" target="_blank" rel="noopener">Subtitle QC Repo</a>
+          </div>
+        </div>
+
+        <aside class="hero-portrait reveal">
+          <div class="portrait-frame">
+            <img src="assets/photo.jpg" alt="丁一璇证件照 / ID photo of Ding Yixuan" width="280" height="360" />
+          </div>
+          <p class="portrait-cap">Plate · ID Photo</p>
+        </aside>
+      </div>
+
+      <div class="folio-stats reveal" aria-label="Key figures">
+        <div><strong>04</strong><span>在线成片 / Films</span></div>
+        <div><strong>ZH/EN</strong><span>双语字幕 / Subs</span></div>
+        <div><strong>FULL</strong><span>剪辑闭环 / Cut</span></div>
+        <div><strong>CI</strong><span>工程质检 / QC</span></div>
+      </div>
+    </section>
+
+    <main>
+      <section class="section-head reveal" id="works">
+        <p class="eyebrow">// Works Matrix · 作品矩阵</p>
+        <h2>
+          可直接点播的成片
+          <span class="en">Stream-ready reels — no multi-GB download</span>
+        </h2>
+        <p class="lede">每条作品以中英双轨说明角色、工具与交付；预览为压缩版，面试官即开即看。滚动时底部字幕轨会跟随当前章节。</p>
+      </section>
+
+      <!-- 01 -->
+      <article class="work reveal" id="work-01"
+        data-tc="01 · 02:51"
+        data-zh="国美全英竖屏：独立剪辑，片头 AI 混剪打开率。"
+        data-en="CAA vertical promo — solo edit, AI montage open.">
+        <div class="work-head">
+          <div class="work-num">01</div>
+          <div class="work-titles">
+            <h3>中国美术学院全英项目 · 自媒体宣传片</h3>
+            <p class="en-title">CAA English Program · Social Promo (Vertical)</p>
+          </div>
+          <div class="work-tags">
+            <span class="tag tag-hot">独立剪辑</span>
+            <span class="tag">AI 混剪</span>
+            <span class="tag">竖屏</span>
+          </div>
+        </div>
+        <div class="dual-track">
+          <div class="track zh">
+            <span class="lang">中文轨 · ZH</span>
+            独立完成成片剪辑与包装。片头及前段采用 <strong>AI 混剪</strong>（选片 + 图生视频 / AIGC 动态镜头），与后文叙事硬切衔接，服务项目传播与打开率。
+          </div>
+          <div class="track en">
+            <span class="lang">English rail · EN</span>
+            Solo cut and package. The open uses <strong>AI montage</strong> (selects + image-to-video / AIGC motion) then hard-cuts into live narrative — built for reach and first-second hold.
+          </div>
+        </div>
+        <p class="work-tools">Tools · 剪映 / Premiere · Seedance 2.0 · 即梦 · 分镜选片</p>
+        <div class="player-shell">
+          <video class="player" controls playsinline preload="metadata"
+            poster="assets/poster-01.jpg" src="videos/01_caa_ai_montage.mp4"></video>
+        </div>
+        <div class="work-foot">
+          <span>~2:51 · Vertical</span>
+          <span class="status">Delivered</span>
+        </div>
+      </article>
+
+      <!-- 02 -->
+      <article class="work reveal" id="work-02"
+        data-tc="02 · 04:23"
+        data-zh="国美成片：中英双语字幕 + AI 封面，硬核闭环。"
+        data-en="CAA master — ZH/EN subs + AI cover, closed loop.">
+        <div class="work-head">
+          <div class="work-num">02</div>
+          <div class="work-titles">
+            <h3>中国美术学院全英项目 · 成片交付（字幕 / 封面）</h3>
+            <p class="en-title">CAA English Program · Master Delivery (Subs / Cover)</p>
+          </div>
+          <div class="work-tags">
+            <span class="tag tag-hot">独立剪辑</span>
+            <span class="tag tag-hot">中英双语字幕</span>
+            <span class="tag">AI 封面</span>
+          </div>
+        </div>
+        <div class="dual-track">
+          <div class="track zh">
+            <span class="lang">中文轨 · ZH</span>
+            独立剪辑成片；制作 <strong>中英双语字幕</strong>（听校对轴、中英对齐、样式统一）；<strong>AI 生成封面</strong>并完成信息排版，形成「剪辑 → 字幕 → 封面」闭环。
+          </div>
+          <div class="track en">
+            <span class="lang">English rail · EN</span>
+            Solo edit; built <strong>ZH/EN dual subtitles</strong> (spotting, alignment, style lock); <strong>AI cover</strong> with type hierarchy — cut → subtitles → key art as one chain.
+          </div>
+        </div>
+        <p class="work-tools">Tools · 剪映 / Premiere（字幕轨）· AI 封面生成</p>
+        <div class="player-shell">
+          <video class="player" controls playsinline preload="metadata"
+            poster="assets/poster-02.jpg" src="videos/02_caa_bilingual_subs.mp4"></video>
+        </div>
+        <div class="work-foot">
+          <span>~4:23 · Landscape</span>
+          <span class="status">Delivered</span>
+        </div>
+      </article>
+
+      <!-- 03 -->
+      <article class="work reveal" id="work-03"
+        data-tc="03 · 06:26"
+        data-zh="成片 940：节奏、组接与完成度的放映样本。"
+        data-en="Work 940 — pacing, assembly, finish as a screening cut.">
+        <div class="work-head">
+          <div class="work-num">03</div>
+          <div class="work-titles">
+            <h3>成片作品 · 940</h3>
+            <p class="en-title">Finished Work · 940</p>
+          </div>
+          <div class="work-tags">
+            <span class="tag">成片剪辑</span>
+            <span class="tag">横屏</span>
+          </div>
+        </div>
+        <div class="dual-track">
+          <div class="track zh">
+            <span class="lang">中文轨 · ZH</span>
+            完整成片预览。展示节奏把控、镜头组接与成片完成度——偏「放映厅」观感的硬交付样本。
+          </div>
+          <div class="track en">
+            <span class="lang">English rail · EN</span>
+            Full cut preview. Read it for pacing, assembly, and finish quality — a screening-room sample of delivery, not a mood board.
+          </div>
+        </div>
+        <p class="work-tools">Tools · 剪辑成片流水线</p>
+        <div class="player-shell">
+          <video class="player" controls playsinline preload="metadata"
+            poster="assets/poster-03.jpg" src="videos/03_work_940.mp4"></video>
+        </div>
+        <div class="work-foot">
+          <span>~6:26 · Landscape</span>
+          <span class="status">Online Preview</span>
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="work reveal" id="work-04"
+        data-tc="04 · 07:51"
+        data-zh="国美长版：完整叙事与字幕呈现的审查轨。"
+        data-en="CAA long cut — full narrative + subtitle review track.">
+        <div class="work-head">
+          <div class="work-num">04</div>
+          <div class="work-titles">
+            <h3>中国美术学院全英项目 · 长版成片</h3>
+            <p class="en-title">CAA English Program · Extended Cut</p>
+          </div>
+          <div class="work-tags">
+            <span class="tag">长版叙事</span>
+            <span class="tag">国美全英</span>
+            <span class="tag">双语向</span>
+          </div>
+        </div>
+        <div class="dual-track">
+          <div class="track zh">
+            <span class="lang">中文轨 · ZH</span>
+            同属国美全英内容矩阵的更长版本；便于审查完整叙事、节奏与字幕呈现。与作品 02 互补：短交付 / 长叙事双轨。
+          </div>
+          <div class="track en">
+            <span class="lang">English rail · EN</span>
+            Longer cut in the same CAA series — for reviewing full narrative, rhythm, and subtitle presentation. Complements Work 02: short delivery vs long form.
+          </div>
+        </div>
+        <p class="work-tools">Tools · 剪辑 · 双语字幕相关制作</p>
+        <div class="player-shell">
+          <video class="player" controls playsinline preload="metadata"
+            poster="assets/poster-04.jpg" src="videos/04_caa_raw_long.mp4"></video>
+        </div>
+        <div class="work-foot">
+          <span>~7:51 · Landscape</span>
+          <span class="status">Online Preview</span>
+        </div>
+      </article>
+
+      <!-- 05 text -->
+      <article class="work work-text reveal" id="work-05"
+        data-tc="05 · LIVE"
+        data-zh="豫龙律所：AI 口播全流程 + 真人出镜采访。"
+        data-en="Yulong Law — AI talk-track pipeline + on-camera.">
+        <div class="work-head">
+          <div class="work-num">05</div>
+          <div class="work-titles">
+            <h3>上海豫龙律师事务所 · AI 口播与出镜</h3>
+            <p class="en-title">Shanghai Yulong Law Firm · AI Talk &amp; On-Camera</p>
+          </div>
+          <div class="work-tags">
+            <span class="tag">AI 口播</span>
+            <span class="tag">出镜</span>
+            <span class="tag">商业交付</span>
+          </div>
+        </div>
+        <div class="dual-track">
+          <div class="track zh">
+            <span class="lang">中文轨 · ZH</span>
+            2023.07–09 出镜口播与人物采访实习；2025.08 起 AI 内容策划兼职。累计 <strong>10+ 条 AI 口播</strong>：选题 → 脚本 → 生成 → 成片审校；真人出镜发布于律所官方抖音号。
+          </div>
+          <div class="track en">
+            <span class="lang">English rail · EN</span>
+            On-camera internship (2023) and remote AI content (2025–). <strong>10+ AI talk pieces</strong> end-to-end: topic → script → generate → review; live hosts published on the firm’s Douyin.
+          </div>
+        </div>
+        <p class="work-tools">Tools · 即梦 · 大模型脚本 · 剪映 · 镜头前表达</p>
+        <div class="work-foot">
+          <span>Commercial</span>
+          <span class="status">Interview Demo</span>
+        </div>
+      </article>
+
+      <!-- engineering -->
+      <section class="notes-panel reveal" id="engineering"
+        data-tc="ENG · QC"
+        data-zh="字幕工程：对齐漂移、CPS、CI 门禁工具化。"
+        data-en="Subtitle engineering — drift, CPS, CI gates as tools.">
+        <p class="eyebrow">// Production Notes · 制作札记</p>
+        <h2>
+          字幕工程 · 不只会剪，还会质检
+          <span class="en">Subtitle workflow — cut, then gate quality</span>
+        </h2>
+        <div class="notes-dual">
+          <p class="zh">将双语字幕交付中的失败模式工具化：对齐漂移、阅读速度 CPS、producer–reviewer 门禁。用工程仓证明「交付可复现」。</p>
+          <p class="en">Failure modes as tools: alignment drift, reading speed (CPS), producer–reviewer gates. A repo that makes bilingual delivery repeatable.</p>
+        </div>
+        <div class="cmd-grid">
+          <div class="cmd"><code>inspect</code><span>结构透视</span></div>
+          <div class="cmd"><code>qc</code><span>交付质检</span></div>
+          <div class="cmd"><code>compare</code><span>中英轨对齐</span></div>
+          <div class="cmd"><code>speed</code><span>CPS 速度</span></div>
+        </div>
+        <p>
+          <a class="btn btn-primary" href="https://github.com/jaden20030518-lgtm/bilingual-subtitle-workflow" target="_blank" rel="noopener">
+            github.com/…/bilingual-subtitle-workflow →
+          </a>
         </p>
-        <div class="chip-row">
-          <span class="mag">独立剪辑</span>
-          <span class="mag">AI 混剪</span>
-          <span class="mag">Seedance / 即梦</span>
-          <span class="mag">中英双语字幕</span>
-          <span class="mag">AI 封面</span>
-          <span class="mag">字幕 QC CLI</span>
-        </div>
-        <div class="hero-cta">
-          <a class="btn btn-primary mag" href="#works">进入作品矩阵 ↓</a>
-          <a class="btn btn-ghost mag" href="https://github.com/jaden20030518-lgtm/bilingual-subtitle-workflow" target="_blank" rel="noopener">ENGINEERING REPO</a>
-        </div>
-        <div class="stat-bar">
-          <div class="stat mag"><strong>04</strong><span>在线成片</span></div>
-          <div class="stat mag"><strong>FULL</strong><span>剪辑闭环</span></div>
-          <div class="stat mag"><strong>ZH/EN</strong><span>双语字幕</span></div>
-          <div class="stat mag"><strong>CI</strong><span>工程质检</span></div>
-        </div>
-      </div>
-      <div class="hero-photo reveal delay-1">
-        <div class="photo-frame">
-          <img src="assets/photo.jpg" alt="丁一璇证件照" width="280" height="360" />
-        </div>
-        <p class="photo-caption">ID PHOTO · 丁一璇</p>
-      </div>
-    </div>
-  </header>
+        <p class="eng-note">29 unit tests · GitHub Actions CI · Python 3.9–3.12</p>
+      </section>
 
-  <main>
-    <section class="section-head reveal" id="works">
-      <p class="eyebrow">// WORKS MATRIX</p>
-      <h2>作品矩阵 · 可直接点播</h2>
-      <p class="lede">预览为压缩版，面试官无需下载原片。每条均可验证：角色 · 工具 · 交付形态。拖动鼠标体验粒子引力与玻璃光效。</p>
-    </section>
+      <!-- contact -->
+      <section class="colophon reveal" id="contact"
+        data-tc="END · TC"
+        data-zh="可试片 · 可试讲 · 可到岗。硬核交付，不堆空话。"
+        data-en="Reel-ready · talk-ready · on-site. Delivery over fluff.">
+        <p class="eyebrow">// Colophon · 版权页</p>
+        <h2>可试片 · 可试讲 · 可到岗</h2>
+        <ul class="contact-list">
+          <li><span>Phone / WeChat</span><strong>18857404732</strong></li>
+          <li><span>Email</span><strong>jaden20030518@gmail.com</strong></li>
+          <li><span>Target</span><strong>AI 内容生成 / AIGC / 新媒体运营 / 双语讲解</strong></li>
+        </ul>
+        <p class="fineprint">在线预览为压缩版；更高清原片面试可提供。本页以中英双轨编辑部版式呈现，对应真实双语字幕与跨文化内容交付能力。</p>
+      </section>
+    </main>
 
-    <article class="work-card glass tilt reveal" id="work-01">
-      <div class="work-meta">
-        <div class="work-index">01</div>
-        <div class="work-tags">
-          <span class="tag tag-hot">独立剪辑</span>
-          <span class="tag">AI 混剪</span>
-          <span class="tag">竖屏</span>
-        </div>
-      </div>
-      <h3>中国美术学院全英项目 · 自媒体宣传片</h3>
-      <p class="work-desc">
-        独立完成成片剪辑与包装。片头及前段采用 <strong>AI 混剪</strong>（选片 + 图生视频/AIGC 动态镜头），
-        与后文叙事硬切衔接，服务项目传播与打开率。
-      </p>
-      <p class="work-tools">TOOLS · 剪映 / Premiere · Seedance 2.0 · 即梦 · 素材分镜</p>
-      <div class="player-shell">
-        <video class="player" controls playsinline preload="metadata"
-          poster="assets/poster-01.jpg" src="videos/01_caa_ai_montage.mp4"></video>
-      </div>
-      <div class="work-foot">
-        <span>~2:51 · 竖屏</span>
-        <span class="status">DELIVERED</span>
-      </div>
-    </article>
-
-    <article class="work-card glass tilt reveal" id="work-02">
-      <div class="work-meta">
-        <div class="work-index">02</div>
-        <div class="work-tags">
-          <span class="tag tag-hot">独立剪辑</span>
-          <span class="tag tag-hot">中英双语字幕</span>
-          <span class="tag">AI 封面</span>
-        </div>
-      </div>
-      <h3>中国美术学院全英项目 · 成片交付（字幕 / 封面）</h3>
-      <p class="work-desc">
-        独立剪辑成片；制作 <strong>中英双语字幕</strong>（听校对轴、中英对齐、样式统一）；
-        <strong>AI 生成封面</strong>并完成信息排版，形成「剪辑 → 字幕 → 封面」硬核闭环。
-      </p>
-      <p class="work-tools">TOOLS · 剪映 / Premiere（字幕轨）· AI 封面生成</p>
-      <div class="player-shell">
-        <video class="player" controls playsinline preload="metadata"
-          poster="assets/poster-02.jpg" src="videos/02_caa_bilingual_subs.mp4"></video>
-      </div>
-      <div class="work-foot">
-        <span>~4:23 · 横屏</span>
-        <span class="status">DELIVERED</span>
-      </div>
-    </article>
-
-    <article class="work-card glass tilt reveal" id="work-03">
-      <div class="work-meta">
-        <div class="work-index">03</div>
-        <div class="work-tags">
-          <span class="tag">成片剪辑</span>
-          <span class="tag">横屏</span>
-        </div>
-      </div>
-      <h3>成片作品 · 940</h3>
-      <p class="work-desc">
-        完整成片预览。展示节奏把控、镜头组接与成片完成度——偏「放映厅」观感的硬交付样本。
-      </p>
-      <p class="work-tools">TOOLS · 剪辑成片流水线</p>
-      <div class="player-shell">
-        <video class="player" controls playsinline preload="metadata"
-          poster="assets/poster-03.jpg" src="videos/03_work_940.mp4"></video>
-      </div>
-      <div class="work-foot">
-        <span>~6:26 · 横屏</span>
-        <span class="status">ONLINE PREVIEW</span>
-      </div>
-    </article>
-
-    <article class="work-card glass tilt reveal" id="work-04">
-      <div class="work-meta">
-        <div class="work-index">04</div>
-        <div class="work-tags">
-          <span class="tag">长版叙事</span>
-          <span class="tag">国美全英</span>
-          <span class="tag">双语向</span>
-        </div>
-      </div>
-      <h3>中国美术学院全英项目 · 长版成片</h3>
-      <p class="work-desc">
-        同属国美全英内容矩阵的更长版本；便于审查完整叙事、节奏与字幕呈现。
-        与作品 02 互补：短交付 / 长叙事双轨。
-      </p>
-      <p class="work-tools">TOOLS · 剪辑 · 双语字幕相关制作</p>
-      <div class="player-shell">
-        <video class="player" controls playsinline preload="metadata"
-          poster="assets/poster-04.jpg" src="videos/04_caa_raw_long.mp4"></video>
-      </div>
-      <div class="work-foot">
-        <span>~7:51 · 横屏</span>
-        <span class="status">ONLINE PREVIEW</span>
-      </div>
-    </article>
-
-    <article class="work-card work-card-text glass tilt reveal" id="work-05">
-      <div class="work-meta">
-        <div class="work-index">05</div>
-        <div class="work-tags">
-          <span class="tag">AI 口播</span>
-          <span class="tag">出镜</span>
-          <span class="tag">商业交付</span>
-        </div>
-      </div>
-      <h3>上海豫龙律师事务所 · AI 口播与出镜</h3>
-      <p class="work-desc">
-        2023.07–09 出镜口播与人物采访实习；2025.08 起 AI 内容策划兼职。
-        累计 <strong>10+ 条 AI 口播</strong>：选题 → 脚本 → 生成 → 成片审校；
-        真人出镜发布于律所官方抖音号。
-      </p>
-      <p class="work-tools">TOOLS · 即梦 · 大模型脚本 · 剪映 · 镜头前表达</p>
-      <div class="work-foot">
-        <span>商业场景</span>
-        <span class="status">INTERVIEW DEMO</span>
-      </div>
-    </article>
-
-    <section class="eng-panel glass tilt reveal" id="engineering">
-      <p class="eyebrow">// ENGINEERING</p>
-      <h2>字幕工程 · 不只会剪，还会质检</h2>
-      <p class="lede">
-        将双语字幕交付中的失败模式工具化：对齐漂移、阅读速度 CPS、producer-reviewer 门禁。
-      </p>
-      <div class="eng-grid">
-        <div class="eng-item mag"><code>inspect</code><span>结构透视</span></div>
-        <div class="eng-item mag"><code>qc</code><span>交付质检</span></div>
-        <div class="eng-item mag"><code>compare</code><span>中英轨对齐</span></div>
-        <div class="eng-item mag"><code>speed</code><span>CPS 阅读速度</span></div>
-      </div>
-      <p>
-        <a class="btn btn-primary mag" href="https://github.com/jaden20030518-lgtm/bilingual-subtitle-workflow" target="_blank" rel="noopener">
-          github.com/…/bilingual-subtitle-workflow →
-        </a>
-      </p>
-      <p class="eng-note">29 unit tests · GitHub Actions CI · Python 3.9–3.12</p>
-    </section>
-
-    <section class="contact-panel glass tilt reveal" id="contact">
-      <p class="eyebrow">// CONTACT</p>
-      <h2>可试片 · 可试讲 · 可到岗</h2>
-      <ul class="contact-list">
-        <li><span>PHONE / WECHAT</span><strong>18857404732</strong></li>
-        <li><span>EMAIL</span><strong>jaden20030518@gmail.com</strong></li>
-        <li><span>TARGET</span><strong>AI 内容生成 / AIGC / 新媒体运营 / 双语讲解</strong></li>
-      </ul>
-      <p class="fineprint">在线预览为压缩版；更高清原片面试可提供。硬核交付，不堆空话。</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <span>丁一璇 · HARDCORE PORTFOLIO · IMMERSIVE GLASS</span>
-    <span>NO MULTI-GB DOWNLOAD · STREAM READY</span>
-  </footer>
-
-  <div class="fx-bar" aria-label="视觉特效控制">
-    <button type="button" id="btnParticles" class="on mag" title="粒子开关">粒子 ON</button>
-    <button type="button" id="btnBurst" class="mag" title="爆发粒子">Burst</button>
-    <button type="button" id="btnReduce" class="mag" title="减弱动效">省动效</button>
+    <footer class="site-footer">
+      <span>丁一璇 · Bilingual Dual-Track Folio</span>
+      <span>Stream ready · No multi-GB dump</span>
+    </footer>
   </div>
+
+  <!-- Signature: live dual subtitle rail -->
+  <aside class="sub-rail" aria-live="polite" aria-atomic="true">
+    <div class="sub-rail-inner">
+      <div class="sub-tc" id="subTc">00 · INTRO</div>
+      <div class="sub-lines">
+        <p class="sub-zh" id="subZh">双语成片，双轨呈现 — 滚动浏览作品时，此处跟随中英说明。</p>
+        <p class="sub-en" id="subEn">Two languages, one delivery — this rail tracks ZH/EN as you scroll.</p>
+      </div>
+      <p class="hint">Dual subtitle rail · 双轨字幕条（随章节更新）</p>
+    </div>
+  </aside>
 
   <script src="effects.js" defer></script>
 </body>

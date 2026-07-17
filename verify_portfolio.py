@@ -16,16 +16,17 @@ REQUIRED_STRINGS = [
     "独立剪辑",
     "中英双语字幕",
     "AI",
-    "HARDCORE",
+    "Dual Track",
     "work-01",
     "work-02",
     "poster-01.jpg",
-    "particles",
     "effects.js",
-    "glass",
+    "dual-track",
+    "sub-rail",
+    "Bilingual",
 ]
 REQUIRED_ASSETS = [
-    "assets/bg-hardcore.jpg",
+    "assets/photo.jpg",
     "assets/poster-01.jpg",
     "assets/poster-02.jpg",
     "assets/poster-03.jpg",
@@ -72,8 +73,11 @@ def check_files() -> list[str]:
         errs.append("missing work-01 section")
     if 'id="work-02"' not in body and "work-02" not in body:
         errs.append("missing work-02 section")
-    if "bg-hardcore.jpg" not in body and "bg-hardcore.jpg" not in (ROOT / "styles.css").read_text(encoding="utf-8"):
-        errs.append("hardcore background not referenced")
+    css = (ROOT / "styles.css").read_text(encoding="utf-8")
+    if "sub-rail" not in body and "sub-rail" not in css:
+        errs.append("dual subtitle rail not referenced")
+    if "dual-track" not in body and "dual-track" not in css:
+        errs.append("dual-track layout missing")
     return errs
 
 
