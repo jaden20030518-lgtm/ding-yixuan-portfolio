@@ -20,6 +20,9 @@ REQUIRED_STRINGS = [
     "work-01",
     "work-02",
     "poster-01.jpg",
+    "particles",
+    "effects.js",
+    "glass",
 ]
 REQUIRED_ASSETS = [
     "assets/bg-hardcore.jpg",
@@ -27,6 +30,7 @@ REQUIRED_ASSETS = [
     "assets/poster-02.jpg",
     "assets/poster-03.jpg",
     "assets/poster-04.jpg",
+    "effects.js",
 ]
 
 VIDEO_RELS = [

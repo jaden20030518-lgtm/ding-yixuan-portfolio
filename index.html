@@ -10,25 +10,36 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- immersive ambient layers -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
   <div class="bg-layer" aria-hidden="true"></div>
   <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
   <div class="vignette" aria-hidden="true"></div>
 
-  <nav class="nav">
-    <a class="nav-brand" href="#top">丁一璇 <span>/ HARDCORE</span></a>
-    <div class="nav-links">
-      <a href="#works">WORKS</a>
-      <a href="#engineering">ENGINEERING</a>
-      <a href="#contact">CONTACT</a>
-    </div>
-  </nav>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <div class="nav-shell">
+    <nav class="nav">
+      <a class="nav-brand mag" href="#top">丁一璇 <span>/ HARDCORE</span></a>
+      <div class="nav-links">
+        <a class="mag" href="#works">WORKS</a>
+        <a class="mag" href="#engineering">ENGINEERING</a>
+        <a class="mag" href="#contact">CONTACT</a>
+      </div>
+    </nav>
+  </div>
 
   <header class="hero" id="top">
     <div class="hero-layout">
-      <div class="hero-copy">
+      <div class="hero-copy reveal">
         <div class="hero-badge">
           <span class="pulse"></span>
-          AIGC · DELIVERY · BILINGUAL
+          AIGC · DELIVERY · BILINGUAL · IMMERSIVE
         </div>
         <h1 class="hero-title">
           <span class="glitch" data-text="丁一璇">丁一璇</span>
@@ -39,25 +50,25 @@
           电话/微信 18857404732 · jaden20030518@gmail.com
         </p>
         <div class="chip-row">
-          <span>独立剪辑</span>
-          <span>AI 混剪</span>
-          <span>Seedance / 即梦</span>
-          <span>中英双语字幕</span>
-          <span>AI 封面</span>
-          <span>字幕 QC CLI</span>
+          <span class="mag">独立剪辑</span>
+          <span class="mag">AI 混剪</span>
+          <span class="mag">Seedance / 即梦</span>
+          <span class="mag">中英双语字幕</span>
+          <span class="mag">AI 封面</span>
+          <span class="mag">字幕 QC CLI</span>
         </div>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#works">进入作品矩阵 ↓</a>
-          <a class="btn btn-ghost" href="https://github.com/jaden20030518-lgtm/bilingual-subtitle-workflow" target="_blank" rel="noopener">ENGINEERING REPO</a>
+          <a class="btn btn-primary mag" href="#works">进入作品矩阵 ↓</a>
+          <a class="btn btn-ghost mag" href="https://github.com/jaden20030518-lgtm/bilingual-subtitle-workflow" target="_blank" rel="noopener">ENGINEERING REPO</a>
         </div>
         <div class="stat-bar">
-          <div class="stat"><strong>04</strong><span>在线成片</span></div>
-          <div class="stat"><strong>FULL</strong><span>剪辑闭环</span></div>
-          <div class="stat"><strong>ZH/EN</strong><span>双语字幕</span></div>
-          <div class="stat"><strong>CI</strong><span>工程质检</span></div>
+          <div class="stat mag"><strong>04</strong><span>在线成片</span></div>
+          <div class="stat mag"><strong>FULL</strong><span>剪辑闭环</span></div>
+          <div class="stat mag"><strong>ZH/EN</strong><span>双语字幕</span></div>
+          <div class="stat mag"><strong>CI</strong><span>工程质检</span></div>
         </div>
       </div>
-      <div class="hero-photo">
+      <div class="hero-photo reveal delay-1">
         <div class="photo-frame">
           <img src="assets/photo.jpg" alt="丁一璇证件照" width="280" height="360" />
         </div>
@@ -67,13 +78,13 @@
   </header>
 
   <main>
-    <section class="section-head" id="works">
+    <section class="section-head reveal" id="works">
       <p class="eyebrow">// WORKS MATRIX</p>
       <h2>作品矩阵 · 可直接点播</h2>
-      <p class="lede">预览为压缩版，面试官无需下载原片。每条均可验证：角色 · 工具 · 交付形态。</p>
+      <p class="lede">预览为压缩版，面试官无需下载原片。每条均可验证：角色 · 工具 · 交付形态。拖动鼠标体验粒子引力与玻璃光效。</p>
     </section>
 
-    <article class="work-card" id="work-01">
+    <article class="work-card glass tilt reveal" id="work-01">
       <div class="work-meta">
         <div class="work-index">01</div>
         <div class="work-tags">
@@ -98,7 +109,7 @@
       </div>
     </article>
 
-    <article class="work-card" id="work-02">
+    <article class="work-card glass tilt reveal" id="work-02">
       <div class="work-meta">
         <div class="work-index">02</div>
         <div class="work-tags">
@@ -123,7 +134,7 @@
       </div>
     </article>
 
-    <article class="work-card" id="work-03">
+    <article class="work-card glass tilt reveal" id="work-03">
       <div class="work-meta">
         <div class="work-index">03</div>
         <div class="work-tags">
@@ -146,7 +157,7 @@
       </div>
     </article>
 
-    <article class="work-card" id="work-04">
+    <article class="work-card glass tilt reveal" id="work-04">
       <div class="work-meta">
         <div class="work-index">04</div>
         <div class="work-tags">
@@ -171,7 +182,7 @@
       </div>
     </article>
 
-    <article class="work-card work-card-text" id="work-05">
+    <article class="work-card work-card-text glass tilt reveal" id="work-05">
       <div class="work-meta">
         <div class="work-index">05</div>
         <div class="work-tags">
@@ -193,27 +204,27 @@
       </div>
     </article>
 
-    <section class="eng-panel" id="engineering">
+    <section class="eng-panel glass tilt reveal" id="engineering">
       <p class="eyebrow">// ENGINEERING</p>
       <h2>字幕工程 · 不只会剪，还会质检</h2>
       <p class="lede">
         将双语字幕交付中的失败模式工具化：对齐漂移、阅读速度 CPS、producer-reviewer 门禁。
       </p>
       <div class="eng-grid">
-        <div class="eng-item"><code>inspect</code><span>结构透视</span></div>
-        <div class="eng-item"><code>qc</code><span>交付质检</span></div>
-        <div class="eng-item"><code>compare</code><span>中英轨对齐</span></div>
-        <div class="eng-item"><code>speed</code><span>CPS 阅读速度</span></div>
+        <div class="eng-item mag"><code>inspect</code><span>结构透视</span></div>
+        <div class="eng-item mag"><code>qc</code><span>交付质检</span></div>
+        <div class="eng-item mag"><code>compare</code><span>中英轨对齐</span></div>
+        <div class="eng-item mag"><code>speed</code><span>CPS 阅读速度</span></div>
       </div>
       <p>
-        <a class="btn btn-primary" href="https://github.com/jaden20030518-lgtm/bilingual-subtitle-workflow" target="_blank" rel="noopener">
+        <a class="btn btn-primary mag" href="https://github.com/jaden20030518-lgtm/bilingual-subtitle-workflow" target="_blank" rel="noopener">
           github.com/…/bilingual-subtitle-workflow →
         </a>
       </p>
       <p class="eng-note">29 unit tests · GitHub Actions CI · Python 3.9–3.12</p>
     </section>
 
-    <section class="contact-panel" id="contact">
+    <section class="contact-panel glass tilt reveal" id="contact">
       <p class="eyebrow">// CONTACT</p>
       <h2>可试片 · 可试讲 · 可到岗</h2>
       <ul class="contact-list">
@@ -226,8 +237,16 @@
   </main>
 
   <footer class="site-footer">
-    <span>丁一璇 · HARDCORE PORTFOLIO</span>
+    <span>丁一璇 · HARDCORE PORTFOLIO · IMMERSIVE GLASS</span>
     <span>NO MULTI-GB DOWNLOAD · STREAM READY</span>
   </footer>
+
+  <div class="fx-bar" aria-label="视觉特效控制">
+    <button type="button" id="btnParticles" class="on mag" title="粒子开关">粒子 ON</button>
+    <button type="button" id="btnBurst" class="mag" title="爆发粒子">Burst</button>
+    <button type="button" id="btnReduce" class="mag" title="减弱动效">省动效</button>
+  </div>
+
+  <script src="effects.js" defer></script>
 </body>
 </html>
