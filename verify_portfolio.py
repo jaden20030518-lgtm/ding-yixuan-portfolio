@@ -16,7 +16,19 @@ REQUIRED_STRINGS = [
     "独立剪辑",
     "中英双语字幕",
     "AI",
+    "HARDCORE",
+    "work-01",
+    "work-02",
+    "poster-01.jpg",
 ]
+REQUIRED_ASSETS = [
+    "assets/bg-hardcore.jpg",
+    "assets/poster-01.jpg",
+    "assets/poster-02.jpg",
+    "assets/poster-03.jpg",
+    "assets/poster-04.jpg",
+]
+
 VIDEO_RELS = [
     "videos/01_caa_ai_montage.mp4",
     "videos/02_caa_bilingual_subs.mp4",
@@ -35,6 +47,10 @@ def check_files() -> list[str]:
     for s in REQUIRED_STRINGS:
         if s not in body:
             errs.append(f"index.html missing string: {s}")
+    for rel in REQUIRED_ASSETS:
+        p = ROOT / rel
+        if not p.is_file():
+            errs.append(f"missing asset: {rel}")
     for rel in VIDEO_RELS:
         if rel not in body:
             errs.append(f"index.html missing video ref: {rel}")
@@ -47,11 +63,13 @@ def check_files() -> list[str]:
                 errs.append(f"{rel} too small: {size}")
             if size > 100 * 1024 * 1024:
                 errs.append(f"{rel} too large: {size}")
-    # section headings
-    if not re.search(r"作品\s*01", body):
-        errs.append("missing 作品 01 heading")
-    if not re.search(r"作品\s*02", body):
-        errs.append("missing 作品 02 heading")
+    # section anchors / works matrix
+    if 'id="work-01"' not in body and "work-01" not in body:
+        errs.append("missing work-01 section")
+    if 'id="work-02"' not in body and "work-02" not in body:
+        errs.append("missing work-02 section")
+    if "bg-hardcore.jpg" not in body and "bg-hardcore.jpg" not in (ROOT / "styles.css").read_text(encoding="utf-8"):
+        errs.append("hardcore background not referenced")
     return errs
 
 
