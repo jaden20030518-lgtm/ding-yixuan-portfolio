@@ -20,6 +20,8 @@ REQUIRED_STRINGS = [
 VIDEO_RELS = [
     "videos/01_caa_ai_montage.mp4",
     "videos/02_caa_bilingual_subs.mp4",
+    "videos/03_work_940.mp4",
+    "videos/04_caa_raw_long.mp4",
 ]
 
 
