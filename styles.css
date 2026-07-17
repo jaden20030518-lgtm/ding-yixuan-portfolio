@@ -1,28 +1,68 @@
 :root {
   --bg: #f7f6f3;
-  --card: #ffffff;
+  --card: rgba(255, 255, 255, 0.82);
+  --card-border: rgba(255, 255, 255, 0.65);
   --text: #1a1a1a;
-  --muted: #5c5c5c;
-  --line: #e8e6e1;
+  --muted: #4a5568;
+  --line: rgba(232, 230, 225, 0.9);
   --accent: #2f6fed;
-  --chip: #eef3ff;
+  --chip: rgba(238, 243, 255, 0.92);
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
   color: var(--text);
-  background: var(--bg);
   line-height: 1.65;
+  min-height: 100vh;
+  /* Decorative magazine-light background (no text on image) */
+  background-color: var(--bg);
+  background-image: url("assets/bg-magazine-light.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Soft veil so text stays readable over texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.35) 40%,
+    rgba(247, 246, 243, 0.5) 100%
+  );
+}
+
+.hero,
+main,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 .hero {
   max-width: 860px;
   margin: 0 auto;
   padding: 48px 20px 24px;
-  border-bottom: 1px solid var(--line);
+}
+
+.hero-text {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 24px 26px;
+  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .eyebrow {
@@ -77,11 +117,13 @@ main {
 
 section {
   background: var(--card);
-  border: 1px solid var(--line);
+  border: 1px solid var(--card-border);
   border-radius: 14px;
   padding: 22px 22px 20px;
   margin-top: 18px;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+  box-shadow: 0 8px 28px rgba(30, 58, 138, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 h2 {
@@ -124,7 +166,22 @@ footer {
   text-align: center;
 }
 
+footer p {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 16px;
+  background: var(--card);
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--muted);
+  font-size: 13px;
+}
+
 @media (max-width: 600px) {
+  body { background-attachment: scroll; }
   .hero { padding-top: 28px; }
+  .hero-text { padding: 18px; }
   section { padding: 16px; }
 }
